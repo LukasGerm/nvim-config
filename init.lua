@@ -79,7 +79,7 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   },
-
+  'jiangmiao/auto-pairs',
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -279,7 +279,11 @@ require('telescope').setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
-vim.keymap.set('n', '<leader>tt', require('nvim-tree.api').toggle(), {desc = '[T]ree [T]oggle'})
+vim.keymap.set('n', '<leader>tt', function ()
+    local api = require('nvim-tree.api')
+    api.tree.toggle()
+  end
+  , {desc = '[T]ree [T]oggle'})
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()

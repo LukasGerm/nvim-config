@@ -428,7 +428,17 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
-
+  pyright = {},
+  marksman = {},
+  texlab = {},
+  jsonls = {},
+  html = {},
+  eslint = {},
+  dockerls = {},
+  cssls = {},
+  jdtls = {},
+  sqlls =  {},
+  tailwindcss = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },

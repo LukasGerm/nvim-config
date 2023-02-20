@@ -261,6 +261,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 require('nvim-tree').setup({
   sort_by = 'case_sensitive',
+  update_focused_file = { enable = true }
 })
 
 -- [[ Configure Telescope ]]

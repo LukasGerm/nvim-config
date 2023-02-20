@@ -261,6 +261,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 require('nvim-tree').setup({
   sort_by = 'case_sensitive',
+  modified = {
+    enable = true
+  },
+  renderer = {
+    highlight_git = true,
+    highlight_opened_files = "all",
+    highlight_modified = "all",
+  },
   update_focused_file = { enable = true }
 })
 

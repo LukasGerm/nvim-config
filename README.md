@@ -127,4 +127,14 @@ This requires:
 ```lua
 use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 ```
+# Important Hotkeys
 
+## Navigation
+
+- Go Back `CMD O`
+- Jump to next word `w`
+- Jump to last word `b`
+- Enter Visual mode `v` (normal visual mode) `V` (line visual mode)
+- Delete stuff in visual mode `d`
+- Undo stuff `u`
+- Redo stuff `r`
